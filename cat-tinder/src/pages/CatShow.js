@@ -8,9 +8,7 @@ class CatShow extends Component {
         <React.Fragment>
             <Header />
             <h3>Cat Show Page!</h3>
-            <p>{ this.props.cat.name }</p>
-            <p>{ this.props.cat.age }</p> 
-            <p>{ this.props.cat.enjoy }</p>
+            <p>{ this.props.cat.name } is { this.props.cat.age } years old and enjoys, { this.props.cat.enjoys }</p>
             <Footer />
         </React.Fragment>
         )
