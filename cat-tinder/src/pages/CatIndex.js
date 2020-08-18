@@ -7,7 +7,7 @@ class CatIndex extends Component {
         return (
         <React.Fragment>
             <Header />
-            <h3> Cat Index Page! </h3>
+            <h3>Cat Index Page!</h3>
             <Footer />
         </React.Fragment>
         )

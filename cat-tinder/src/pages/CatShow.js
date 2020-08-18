@@ -7,7 +7,7 @@ class CatShow extends Component {
         return (
         <React.Fragment>
             <Header />
-            <h3> Cat Show Page! </h3>
+            <h3>Cat Show Page!</h3>
             <Footer />
         </React.Fragment>
         )
