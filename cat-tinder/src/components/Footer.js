@@ -4,9 +4,9 @@ class Footer extends Component {
     render (){
         return (
         <React.Fragment>
-            <Footer>
-                Cat Tinder 🐈 brought to you by Selam and Erica at LEARN Academy!
-            </Footer>
+            <p>
+                Cat Tinder <span> 🐈</span> brought to you by Selam and Erica at LEARN Academy!
+            </p>
         </React.Fragment>
         )
     }

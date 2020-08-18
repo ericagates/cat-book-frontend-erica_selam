@@ -29,7 +29,9 @@ class App extends Component {
             <Router>
             <Switch>
                 <Route exact path="/" component={ Home } />
-                <Route path="/catindex" render = { (props) => < CatIndex cats={cats} />  } />
+                <Route path="/catindex" render = { (props) => < CatIndex allCats={cats} />  } 
+                
+                />
                 <Route path="/catshow/:id" 
                 render={(props)=> {
                     let id = props.match.params.id
@@ -37,7 +39,8 @@ class App extends Component {
                     return ( 
                     <CatShow cat = { cat }/>
                     )
-                    }}/>                    
+                    }}
+                />                    
                 <Route path="/catnew" component={ CatNew } />
                 <Route path="/catedit/:id" component={ CatEdit } />
                 <Route component={ NotFound }/>
