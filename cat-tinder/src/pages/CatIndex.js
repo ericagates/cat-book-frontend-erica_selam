@@ -8,7 +8,7 @@ class CatIndex extends Component {
         return (
         <React.Fragment>
             <Header />
-            <h3>Cat Index Page!</h3>
+            <h3>All of the Cats!</h3>
             <ol>
                 { this.props.allCats.map((cat, index) => {
                     return (
