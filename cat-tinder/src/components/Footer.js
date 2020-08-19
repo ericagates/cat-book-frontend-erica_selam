@@ -5,7 +5,7 @@ class Footer extends Component {
         return (
         <React.Fragment>
             <p>
-                Cat Tinder <span> 🐈</span> brought to you by Selam and Erica at LEARN Academy!
+                CatBook <span> 🐈</span> brought to you by Selam and Erica at LEARN Academy!
             </p>
         </React.Fragment>
         )

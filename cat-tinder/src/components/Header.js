@@ -27,7 +27,7 @@ class Header extends Component {
         <React.Fragment>
           <div>
       <Navbar color="faded" light >
-        <NavbarBrand href="/" className="mr-auto">CatBook!</NavbarBrand>
+        <NavbarBrand href="/" className="mr-auto">CatBook</NavbarBrand>
         <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar className="text-right">
