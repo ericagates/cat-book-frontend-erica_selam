@@ -26,25 +26,24 @@ class Header extends Component {
         return (
         <React.Fragment>
           <div>
-      <Navbar color="faded" light >
-        <NavbarBrand href="/" className="mr-auto">CatBook</NavbarBrand>
-        <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-        <Collapse isOpen={!collapsed} navbar>
-          <Nav navbar className="text-right">
-          <NavItem>
-              <NavLink to= {`/`}>Home</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to= {`/catindex`}>Show All Cats</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to= {`/catnew`}>Add A Cat</NavLink>
-            </NavItem>
-          </Nav>
-
-        </Collapse>
-      </Navbar>
-    </div>
+            <Navbar color="faded" light >
+              <NavbarBrand href="/" className="mr-auto">CatBook</NavbarBrand>
+              <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+              <Collapse isOpen={!collapsed} navbar>
+              <Nav navbar className="text-right">
+                <NavItem>
+                    <NavLink to= {`/`}>Home</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to= {`/catindex`}>Show All Cats</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to= {`/catnew`}>Add A Cat</NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
+            </Navbar>
+          </div>
         </React.Fragment>
         )
     }

@@ -8,11 +8,13 @@ class Home extends Component {
     render (){
         return (
         <React.Fragment>
+            <div className = "d-flex flex-column">
             <Header />
             <h3> Welcome to CatBook! </h3>
             <h4>A place to meet all of your furry feline friends!</h4>
             <img src = {persian_cat} alt="grey persian cat" className = "cat" width="50%"/>
             <Footer />
+            </div>
         </React.Fragment>
         )
     }
