@@ -7,24 +7,35 @@ class Header extends Component {
   constructor(props){
     super(props)
     this.state = {
-      collapsed: true,
-      setCollapsed: true
+      collapsed: true
+    }
+  }
+
+  toggleNavbar = () => {
+    let {collapsed} = this.state
+    if (collapsed === true){
+      this.setState({collapsed: false})
+    } else {
+      this.setState({collapsed: true})
     }
   }
   render (){
-    let{collapsed, setCollapsed} = this.state
+    let{collapsed} = this.state
     // TypeError: setCollapsed is not a function
-    const toggleNavbar = () => setCollapsed(!collapsed)
+   
         return (
         <React.Fragment>
           <div>
       <Navbar color="faded" light>
-        <NavbarBrand to= {`/`} className="mr-auto">Cat Tinder</NavbarBrand>
-        <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+        <NavbarBrand href="/" className="mr-auto">Cat Tinder</NavbarBrand>
+        <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
               <NavLink to= {`/catindex`}>Show All Cats</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to= {`/catnew`}>Add A Cat</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
