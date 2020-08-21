@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Header from '../components/Header.js'
 import Footer from '../components/Footer.js'
-import persian_cat from '../assets/persian_cat.jpg'
+import butterfly_cat from '../assets/butterfly_cat.jpg'
 import { Container } from 'reactstrap'
 
 class Home extends Component {
@@ -10,9 +10,12 @@ class Home extends Component {
         <React.Fragment>
             <div className = "d-flex flex-column">
             <Header />
-            <h3> Welcome to CatBook! </h3>
-            <h4>A place to meet all of your furry feline friends!</h4>
-            <img src = {persian_cat} alt="grey persian cat" className = "cat" width="50%"/>
+            <h3 className='text-center'> 
+            <strong>Welcome to CatBook!</strong>
+            </h3>
+            <h4 className='text-center'>A place to meet all of your furry feline friends!</h4>
+            <br/>
+            <img src = {butterfly_cat} alt="grey persian cat" className = "cat" width="50%"/>
             <Footer />
             </div>
         </React.Fragment>
