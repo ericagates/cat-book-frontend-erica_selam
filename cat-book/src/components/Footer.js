@@ -4,8 +4,8 @@ class Footer extends Component {
     render (){
         return (
         <React.Fragment>
-            <footer class="py-4" >
-            <div class="container text-center">
+            <footer className="py-4" >
+            <div className="container text-center">
                 CatBook <span> 🐈</span> brought to you by Selam and Erica at LEARN Academy!
             </div>
             </footer>

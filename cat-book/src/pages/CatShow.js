@@ -14,10 +14,15 @@ class CatShow extends Component {
             <NavLink
                 to={`/catedit/${this.props.cat.id}`}
             >
-            <Button color="secondary">
+            <Button color="primary">
             Edit Cat Profile
             </Button>
             </NavLink>
+            <br/>
+            <NavLink to= {`/catindex`}>
+            Show all cats
+            </NavLink>
+
             <Footer />
         </React.Fragment>
         )

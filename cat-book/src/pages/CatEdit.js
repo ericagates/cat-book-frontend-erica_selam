@@ -18,28 +18,29 @@ class CatEdit extends Component {
             success: false
         }
     }
-      
-      handleChange = (e) => {
+
+    handleChange = (e) => {
         // destructuring form out of state
         let { form } = this.state
         form[e.target.name] = e.target.value
         // setting state to the updated form
         this.setState({ form: form })
-      }
+    }
 
-      handleSubmit = (e) => {
+    handleSubmit = (e) => {
         // keeps react from refreshing the page unnecessarily
         e.preventDefault()
         // a function call being passed from App.js
+        console.log(this.state.form);
         this.props.editCat(this.state.form, this.props.cat.id)
         // update success to true
         this.setState({ success: true })
-      }
+    }
     
     render (){
         return (
         <React.Fragment>
-             <Header />
+            <Header />
             <h3> Cat Edit Page! </h3>
             <Form>
                 <FormGroup>
@@ -47,6 +48,8 @@ class CatEdit extends Component {
                     <Input
                     type="text"
                     name="firstName"
+                    onChange = { this.handleChange }
+                    value = { this.state.form.firstName }
                     />
                 </FormGroup>
                 <FormGroup>
@@ -54,6 +57,8 @@ class CatEdit extends Component {
                     <Input
                     type="text"
                     name="lastName"
+                    onChange = { this.handleChange }
+                    value = { this.state.form.lastName }
                     />
                 </FormGroup>
                 <FormGroup>
@@ -61,6 +66,8 @@ class CatEdit extends Component {
                     <Input
                     type="number"
                     name="age"
+                    onChange = { this.handleChange }
+                    value = { this.state.form.age }
                     />
                 </FormGroup>
                 <FormGroup>
@@ -68,6 +75,8 @@ class CatEdit extends Component {
                     <Input
                     type="text"
                     name="enjoys"
+                    onChange = { this.handleChange }
+                    value = { this.state.form.enjoys }
                     />
                 </FormGroup>
                 <Button

@@ -31,7 +31,7 @@ class App extends Component {
         }).then(catsArray => {
             this.setState({ cats: catsArray })
         }).catch(errors => {
-            console.log("index-errors:", errors)
+            console.log("index errors", errors)
         })
     }
 
@@ -48,14 +48,26 @@ class App extends Component {
             }
             return response
         }).catch(errors => {
-            console.log("create-errors:", errors)
+            console.log("create errors", errors)
         })
     }
 
     editCat = (editcat, id) => {
-        console.log("editcat:", editcat)
-        console.log("id:", id)
-      }
+        return fetch(`http://localhost:3000/cats/${id}`, {
+            // converting an object to a string
+            body: JSON.stringify(editcat),
+            // specify the info being sent in JSON and the info returning should be JSON
+            headers: {"Content-Type": "application/json"},
+            // HTTP verb so the correct endpoint is invoked on the server
+            method: "PATCH"
+        }).then(response => {
+            // if the response is good  - reload the cats
+            if(response.status === 200){ this.componentDidMount()}
+            return response
+        }).catch(errors => {
+            console.log("edit errors", errors)
+        })
+    }
 
     render (){
         let {cats} = this.state
