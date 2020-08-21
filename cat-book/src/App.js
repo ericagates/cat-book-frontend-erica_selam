@@ -69,6 +69,28 @@ class App extends Component {
         })
     }
 
+    deleteCat = (id) => {
+        console.log("deletedCatID: ", id)
+        return fetch(`http://localhost:3000/cats/${id}`, {
+          headers: {
+            "Content-Type": "application/json"
+          },
+          method: "DELETE"
+        })
+        .then(response => {
+          if(response.status === 200){
+            this.componentDidMount()
+          }else {
+            alert("Not successfully deleted")
+        }
+        return response
+          
+        })
+        .catch(errors => {
+          console.log("delete errors:", errors)
+        })
+      }
+
     render (){
         let {cats} = this.state
         return (
@@ -84,7 +106,7 @@ class App extends Component {
                     let id = props.match.params.id
                     let cat = cats.find(cat => cat.id === parseInt(id))
                     return ( 
-                    <CatShow cat = { cat }/>
+                    <CatShow cat = { cat } deleteCat={ this.deleteCat }/>
                     )
                     }}
                 />                    

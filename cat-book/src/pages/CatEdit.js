@@ -10,10 +10,10 @@ class CatEdit extends Component {
         super(props)
         this.state = {
             form:{
-            firstName: "",
-            lastName:"",
-            age: "",
-            enjoys: ""
+            firstName: this.props.cat.firstName,
+            lastName: this.props.cat.lastName,
+            age: this.props.cat.age,
+            enjoys: this.props.cat.enjoys
             },
             success: false
         }
@@ -31,7 +31,6 @@ class CatEdit extends Component {
         // keeps react from refreshing the page unnecessarily
         e.preventDefault()
         // a function call being passed from App.js
-        console.log(this.state.form);
         this.props.editCat(this.state.form, this.props.cat.id)
         // update success to true
         this.setState({ success: true })
