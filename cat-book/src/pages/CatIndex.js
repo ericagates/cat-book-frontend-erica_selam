@@ -14,7 +14,7 @@ class CatIndex extends Component {
                     return (
                         <div key = {index}>
                         <NavLink to= { `/catshow/${ cat.id }` }>
-                        <li>{cat.name}</li>
+                        <li>{cat.firstName} {cat.lastName}</li>
                         </NavLink>
                         </div>
                     )

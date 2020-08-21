@@ -35,7 +35,7 @@ class CatNew extends Component {
         return (
         <React.Fragment>
             <Header />
-            <h3> Cat New Page! </h3>
+            <h3> Add a new cat! </h3>
             <Form>
                 <FormGroup>
                     <Label>First Name</Label>

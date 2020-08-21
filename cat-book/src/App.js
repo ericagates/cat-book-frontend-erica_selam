@@ -18,13 +18,38 @@ class App extends Component {
     constructor(props){
         super(props)
         this.state = {
-            cats: mockCats
+            cats: []
         }
 
     }
 
+    componentDidMount(){
+        fetch("http://localhost:3000/cats").then(response => {
+            if(response.status === 200){
+                return(response.json())
+            }
+        }).then(catsArray => {
+            this.setState({ cats: catsArray })
+        }).catch(errors => {
+            console.log("index-errors:", errors)
+        })
+    }
+
     createNewCat = (newCat) => {
-        console.log(newCat)
+        return fetch("http://localhost:3000/cats", {
+            body: JSON.stringify(newCat),
+            headers: { "Content-Type": "application/json" },
+            method: "POST"
+        }).then(response => {
+            if(response.status === 200){
+                this.componentDidMount()
+            } else {
+                alert("Please check your form")
+            }
+            return response
+        }).catch(errors => {
+            console.log("create-errors:", errors)
+        })
     }
 
     render (){
