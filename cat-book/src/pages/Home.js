@@ -15,7 +15,7 @@ class Home extends Component {
             </h3>
             <h4 className='text-center'>A place to meet all of your furry feline friends!</h4>
             <br/>
-            <img src = {butterfly_cat} alt="grey persian cat" className = "cat" width="50%"/>
+            <img src = {butterfly_cat} alt="grey persian cat" className = "cat" />
             <Footer />
             </div>
         </React.Fragment>
